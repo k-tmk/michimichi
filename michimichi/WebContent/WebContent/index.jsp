@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-    application.getRequestDispatcher("/CtrlForFront?pge_id=0").forward(request, response);
+    application.getRequestDispatcher("/CtrlForFront?pge_id=1").forward(request, response);
 %>
 </body>
 </html>
