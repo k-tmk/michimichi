@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AccountDAO;
+import beams.LoginUser;
+import dao.M_accountsDAO;
 import model.Account;
-import model.LoginUser;
 
 /**
  * Servlet implementation class AccountEdit
@@ -71,7 +71,7 @@ public class AccountEdit extends HttpServlet {
 		}
 
 		//データを読み込む処理
-		AccountDAO accountDAO = new AccountDAO();
+		M_accountsDAO accountDAO = new M_accountsDAO();
 		if(user_id > 0) {
 			//指定したuser_idで該当アカウントを読み込む
 			Account account = accountDAO.findByUserid(user_id);
@@ -132,7 +132,7 @@ public class AccountEdit extends HttpServlet {
 			user_id = Integer.parseInt(str);
 		}
 
-		AccountDAO accountDAO = new AccountDAO();
+		M_accountsDAO accountDAO = new M_accountsDAO();
 		Account account;
 
 		//入力されたアカウントデータを取得してaccountに代入する

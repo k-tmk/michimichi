@@ -1,5 +1,6 @@
 package model;
 
+import beams.LoginUser;
 import dao.LoginDAO;
 
 public class LoginLogic {

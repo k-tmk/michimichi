@@ -5,8 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import beams.LoginUser;
 import model.DbConnection;
-import model.LoginUser;
 
 public class LoginDAO {
 

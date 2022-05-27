@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ page import="model.LoginUser,model.Account,java.util.List"%>
+<%@ page import="beams.LoginUser,model.Account,java.util.List"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%
 	LoginUser loginUser = (LoginUser) session.getAttribute("loginUser");
