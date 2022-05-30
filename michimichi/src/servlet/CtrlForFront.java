@@ -1,5 +1,6 @@
 package servlet;
 
+import java.awt.Menu;
 import java.io.IOException;
 import java.util.List;
 
@@ -10,10 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Menu;
-import model.MenuLogic;
-import model.Posts;
-import model.PostsLogic;
 
 /**
  * Servlet implementation class CtrlForFront
@@ -60,22 +57,36 @@ public class CtrlForFront extends HttpServlet {
 			//トップページ
 			forward = movetoTop(request);
 		} else if (pge_id==2) {
-			//コンセプトページ
-			//forward = movetoConcept(request);
-			//未作成なので、とりあえずトップへ
-			forward = movetoTop(request);
+			//カテゴリー検索ページ
+			forward = movetoSearch(request);
 		} else if (pge_id==3) {
-			//メニューページ
-			//forward = movetoMenu(request);
-			//未作成なので、とりあえずトップへ
-			forward = movetoTop(request);
+			//記事一覧ページ
+			forward = movetoFeatureTop(request);
 		} else if (pge_id==4) {
-			//CMS用ログインページ
+			//記事個別ページ
+			forward = movetoFeature(request);
+		} else if (pge_id==5) {
+			//お問い合わせページ
+			forward = movetoInquiry(request);
+		} else if (pge_id==6) {
+			//お問い合わせ内容確認ページ
+			forward = movetoInquiryConfirm(request);
+		} else if (pge_id==7) {
+			//お問い合わせ送信結果ページ
+			forward = movetoInquiryResult(request);
+		} else if (pge_id==8) {
+			//このHPについてページ
+			forward = movetoWhitePaper(request);
+		} else if (pge_id==9) {
+			//道の駅個別ページ
+			forward = movetoStationTemp(request);
+		}  else if (pge_id==10) {
+			//管理者ログインページ
 			forward = movetoLogin();
 		} else {
 			//トップページ
 			forward = movetoTop(request);
-//			System.out.println("forward:" + forward);
+			//System.out.println("forward:" + forward);
 		}
 
 		//メイン画面にフォーワード
@@ -92,12 +103,6 @@ public class CtrlForFront extends HttpServlet {
 	private String movetoConcept(HttpServletRequest request) {
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
-	}
-
-	private String movetoLogin() {
-		// フォーワード先 "
-		String forward = "WEB-INF/jsp/login.jsp";
-		return forward;
 	}
 
 
@@ -124,8 +129,83 @@ public class CtrlForFront extends HttpServlet {
 		request.setAttribute("postslist", postslist);
 		request.setAttribute("menulist", menulist);
 
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/top.jsp";
+		return forward;
+	}
+
+	private String movetoSearch(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/search.jsp";
+		return forward;
+
+	}
+
+	private String movetoFeatureTop(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/feature_top.jsp";
+		return forward;
+
+	}
+
+	private String movetoFeature(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/feature.jsp";
+		return forward;
+
+	}
+	private String movetoInquiry(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/inquiry.jsp";
+		return forward;
+
+	}
+
+	private String movetoInquiryConfirm(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/inquiry_confirm.jsp";
+		return forward;
+
+	}
+
+	private String movetoInquiryResult(HttpServletRequest request) {
+
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/inquiry_result.jsp";
+		return forward;
+
+	}
+
+	private String movetoWhitePaper(HttpServletRequest request) {
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/white_paper.jsp";
+		return forward;
+
+	}
+
+	private String movetoStationTemp(HttpServletRequest request) {
+
+		// フォーワード先
+		String forward = "WEB-INF/jsp/front/station_temp.jsp";
+		return forward;
+
+	}
+
+	private String movetoLogin() {
 		// フォーワード先 "
-		String forward = "WEB-INF/jsp/top.jsp";
+		String forward = "WEB-INF/jsp/cms/login.jsp";
 		return forward;
 	}
 
