@@ -1,9 +1,9 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" isELIgnored="false"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<c:import url="layout/template-back.jsp">
+<c:import url="layout/template_back.jsp">
 
 	<c:param name="title" value="ログイン" />
 	<c:param name="keywords" value="徳島 Coffee" />
@@ -12,9 +12,9 @@
 
 		<div id="wrap">
 			<div id="main">
-				<h1>Cafe Leafにログイン</h1>
+				<h1>管理者ログイン</h1>
 				<div id="login">
-					<form action="/cafeshop/Login" method="post">
+					<form action="/michimichi/Login" method="post">
 						<p>
 							ユーザー名：<input type="text" name="login_id">
 						</p>

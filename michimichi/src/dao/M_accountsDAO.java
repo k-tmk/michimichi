@@ -12,12 +12,13 @@ import java.util.List;
 
 import model.Account;
 import model.DbConnection;
+import servlet.AccountEdit;
 
 public class M_accountsDAO {
 
-	public Account findByUserid(int userid){
+	public AccountEdit findByUserid(int userid){
 
-		Account account = null;
+		AccountEdit account = null;
 
 		//データベースに接続
 		Connection conn = null;
@@ -56,7 +57,7 @@ public class M_accountsDAO {
 				Date createtime = rs.getTimestamp("createtime");
 
 				//accountインスタンスを生成
-				account = new Account(
+				account = new AccountEdit(
 						user_id,
 						login_id,
 						pass,
@@ -91,7 +92,7 @@ public class M_accountsDAO {
 	}
 
 
-	public List<Account> findAll(){
+	public List<AccountEdit> findAll(){
 
 		String sql = "";
 
@@ -100,7 +101,7 @@ public class M_accountsDAO {
 		conn = DbConnection.conn;
 		if(conn == null) return null;
 
-		List<Account> userList = new ArrayList<Account>();
+		List<AccountEdit> userList = new ArrayList<AccountEdit>();
 
 		try {
 			//SQL文
@@ -130,7 +131,7 @@ public class M_accountsDAO {
 				Date createtime = rs.getTimestamp("createtime");
 
 				//accountインスタンスを生成
-				Account account =  new Account(
+				AccountEdit account =  new AccountEdit(
 						user_id,
 						login_id,
 						pass,
@@ -168,7 +169,7 @@ public class M_accountsDAO {
 	 * @param account
 	 * @return
 	 */
-	public boolean insert(Account account) {
+	public boolean insert(AccountEdit account) {
 
 		String sql = "";
 

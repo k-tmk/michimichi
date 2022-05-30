@@ -9,8 +9,8 @@
 <title>どこつぶ</title>
 </head>
 <body>
-	<h1>どこつぶログアウト</h1>
+	<h1>管理者ログアウト</h1>
 	<p>ログアウトしました</p>
-	<a href="/cafeshop">TOPへ</a>
+	<a href="/michimichi">TOPへ</a>
 </body>
 </html>

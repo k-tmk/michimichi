@@ -14,7 +14,7 @@
 <meta charset="UTF-8">
 <link href="/cafeshop/css/style-cms.css" rel="stylesheet" media="all">
 
-<title>どこつぶ アカウント管理</title>
+<title>アカウント管理</title>
 
 
 <script type="text/javascript">
@@ -53,7 +53,7 @@
 <body>
 	<div id="wrap">
 		<p id="login">
-			<%=loginUser.getLogin_id()%>さまオンライン中 <a href="/cafeshop/Logout">ログアウト</a>
+			<%=loginUser.getLogin_id()%>さまオンライン中 <a href="/michimichi/Logout">ログアウト</a>
 		</p>
 
 		<jsp:include page="layout/header-back.jsp" />
