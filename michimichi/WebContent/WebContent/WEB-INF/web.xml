@@ -10,7 +10,7 @@
 	</context-param>
 	<context-param>
 		<param-name>jdbcUri</param-name>
-		<param-value>jdbc:h2:tcp://localhost/c:/h2db4/cafedb</param-value>
+		<param-value>jdbc:h2:tcp://localhost/c:/michimichi/michimichi</param-value>
 	</context-param>
 	<context-param>
 		<param-name>dbUser</param-name>
@@ -22,7 +22,7 @@
 	</context-param>
 
 
-	<display-name>cafeshop</display-name>
+	<display-name>michimichi</display-name>
 
 
 	<welcome-file-list>
