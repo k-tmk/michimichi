@@ -7,7 +7,7 @@
 <head>
 <!-- META -->
 <meta charset="utf-8">
-<meta name="keywords" content="${param.keywords}">
+<meta name="keywords" content="未知,未知の駅,みちのえき,道の駅,mitinoeki,徳島,tokusima,とくしま,四国,観光,温泉,遊ぶ,ツーリング,お出かけ,ドライブ,景色,家族で遊ぶ場,休息,休憩,産直市場,イベント,特産物,お土産,田舎,ご当地,インスタ映え,くるくるなると,ドイツ館,うだつの街並み,祖谷,鳴門,阿波,かずら橋">
 <meta name="description" content="${param.description}">
 
 <!-- META VIEWPOINT -->
@@ -57,9 +57,9 @@
 
 </head>
 <body>
-	<jsp:include page="header-front-top.jsp" />
+	<jsp:include page="header_top.jsp" />
 	<jsp:include page="navigation.jsp" />
 	<div class="container">${param.content}</div>
-	<jsp:include page="footer-front.jsp" />
+	<jsp:include page="footer_top.jsp" />
 </body>
 </html>

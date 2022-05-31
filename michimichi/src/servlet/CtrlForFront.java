@@ -1,6 +1,5 @@
 package servlet;
 
-import java.awt.Menu;
 import java.io.IOException;
 import java.util.List;
 
@@ -10,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import beams.FeatureList;
+import model.FeatureListLogic;
 
 
 /**
@@ -95,15 +97,15 @@ public class CtrlForFront extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	private String movetoMenu(HttpServletRequest request) {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
-
-	private String movetoConcept(HttpServletRequest request) {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
+//	private String movetoMenu(HttpServletRequest request) {
+//		// TODO 自動生成されたメソッド・スタブ
+//		return null;
+//	}
+//
+//	private String movetoConcept(HttpServletRequest request) {
+//		// TODO 自動生成されたメソッド・スタブ
+//		return null;
+//	}
 
 
 	/**
@@ -112,22 +114,22 @@ public class CtrlForFront extends HttpServlet {
 	 * @return フォワード用パス
 	 */
 	private String movetoTop(HttpServletRequest request) {
-		final int SHOWFALG = 1; //一覧に表示するものだけ
+//		final int SHOWFALG = 1; //一覧に表示するものだけ
 
 		// 記事一覧を取得する
-		PostsLogic postslogic = new PostsLogic();
-		List<Posts> postslist =  postslogic.getAllPosts(SHOWFALG);
+//		PostsLogic postslogic = new PostsLogic();
+//		List<Posts> postslist =  postslogic.getAllPosts(SHOWFALG);
 //		System.out.println("movetoTop:");
 
 		// メニュー一覧を取得する
-		MenuLogic menulogic = new MenuLogic();
-		List<Menu> menulist = menulogic.getAllMenu(SHOWFALG);
+//		MenuLogic menulogic = new MenuLogic();
+//		List<Menu> menulist = menulogic.getAllMenu(SHOWFALG);
 
 //		System.out.print(menulist.get(0));
 
 		// リクエストスコープに保存
-		request.setAttribute("postslist", postslist);
-		request.setAttribute("menulist", menulist);
+//		request.setAttribute("postslist", postslist);
+//		request.setAttribute("menulist", menulist);
 
 		// フォーワード先
 		String forward = "WEB-INF/jsp/front/top.jsp";
@@ -144,7 +146,15 @@ public class CtrlForFront extends HttpServlet {
 	}
 
 	private String movetoFeatureTop(HttpServletRequest request) {
+		//一覧に表示するものだけ（DAOへの命令の大元）
+		final int SHOWFALG = 1;
 
+		// 特集記事一覧を取得する
+		FeatureListLogic featureListLogic = new FeatureListLogic();
+		List<FeatureList> FLList =  featureListLogic.getAllFeatureList(SHOWFALG);
+
+		// リクエストスコープに保存
+		request.setAttribute("FLList", FLList);
 
 		// フォーワード先
 		String forward = "WEB-INF/jsp/front/feature_top.jsp";

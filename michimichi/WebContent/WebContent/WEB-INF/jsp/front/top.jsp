@@ -7,7 +7,7 @@
 <c:import url="layout/template.jsp">
 
 	<c:param name="title" value="Cafe Leaf　美しい" />
-	<c:param name="keywords" value="徳島,Coffee,Cafe Leaf" />
+	<!-- <c:param name="keywords" value="徳島,Coffee,Cafe Leaf" /> -->
 	<c:param name="description" value="description。description" />
 	<c:param name="mycss" value="test.css" />
 	<c:param name="mycss2" value="" />
