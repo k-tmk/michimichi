@@ -3,7 +3,7 @@ package model;
 import java.util.List;
 
 import beams.FeatureList;
-import dao.M_facilitiesDAO;
+import dao.T_featuresDAO;
 
 
 public class FeatureListLogic {
@@ -15,7 +15,7 @@ public class FeatureListLogic {
 
 	//記事作成時に失敗したときのメソッド（管理側）
 	public void execute(FeatureList feature) {
-		M_facilitiesDAO dao = new M_facilitiesDAO();
+		T_featuresDAO dao = new T_featuresDAO();
 		if(dao.create(feature) == false) {
 
 		}
@@ -24,7 +24,7 @@ public class FeatureListLogic {
 	//すべての記事をID降順で取得する
 	public List<FeatureList> getAllFeatureList(int showflag){
 		//DAOオブジェクト生成
-		M_facilitiesDAO dao = new M_facilitiesDAO();
+		T_featuresDAO dao = new T_featuresDAO();
 		//DBから全レコードを取得する
 		List<FeatureList> FLList = dao.findAll(showflag);
 		return FLList;
