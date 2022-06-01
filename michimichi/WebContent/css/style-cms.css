@@ -1,0 +1,290 @@
+@charset "utf-8";
+/*
+=======================================
+  Reset CSS
+=======================================
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+    blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins,
+    kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul,
+    li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+    thead, tr, th, td, article, aside, canvas, details, figcaption,
+    figure, footer, header, main, menu, nav, section, summary, time,
+    mark, audio, video {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu,
+    nav, section {
+    display: block;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    color: #59220d;
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, input, select, textarea {
+    vertical-align: middle;
+}
+
+a {
+    color: #59220d;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #d53e04;
+}
+
+a:hover img {
+    opacity: 0.7;
+}
+
+body {
+    background-color: #4682b4;
+}
+
+/*コンテンツ全体枠の設定*/
+#wrap {
+    width: 900px;
+    margin: 4px auto;
+    padding: 0px 20px;
+    border: #f6bb9e 2px solid;
+    background-color: #fff;
+}
+
+/*リンク色の設定*/
+a {
+    color: #df4839;
+}
+
+a:hover {
+    color: #ff705b;
+}
+
+/*ページタイトルの設定*/
+h1 {
+    color: #6fbb9a;
+    text-align: center;
+    font-size: 200%;
+}
+
+h1 span {
+    color: #d0e35b;
+}
+
+/*大見出しの設定*/
+h2 {
+    color: #6fbb9a;
+    border: #94c8b1 1px dotted;
+    border-left: #d0e35b 10px solid;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+#input {
+    margin: 20px auto;
+}
+
+div#login {
+    margin: 40px auto;
+    text-align: center;
+    border: 1px #ccc solid;
+    padding: 20px;
+    width: 500px;
+}
+
+div#login p {
+    margin-bottom: 10px;
+}
+
+#main h1 {
+    margin-top: 20px;
+}
+
+/*表組の設定*/
+table.entryForm {
+    width: 100%;
+    border: #f6bb9e 2px solid;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.entryForm th, .entryForm td {
+    padding: 5px 10px;
+    border: #f6bb9e 1px solid;
+}
+
+.entryForm th {
+    /*width: 10em;*/
+    background-color: #ffeeee;
+    text-align:;
+    vertical-align: middle;
+}
+
+th.subtitle {
+    text-align: center;
+}
+
+td.show {
+    text-align: center;
+}
+
+td.price {
+    text-align: right;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"],
+    input[type="date"], input[type="number"], input[type="radio"],
+    textarea {
+    /*width: 400px;*/
+    padding: 5px;
+    border: #ccc 1px solid;
+    text-align: left;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    background-color: #ffffee;
+}
+
+select {
+    padding: 6px;
+    border: #ccc 1px solid;
+    text-align: left;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+label, input[type="radio"], input[type="checkbox"], input[type="reset"],
+    input[type="email"], input[type="text"], input[type="tel"], input[type="submit"],
+    input[type="button"] {
+    cursor: pointer;
+}
+
+/*ボタンの設定*/
+.btns {
+    text-align: center;
+}
+
+/*ボタンの基本スタイル*/
+.btns {
+    width: 100px;
+    margin: 0px 5px;
+    padding: 5px;
+    border: #ccc 1px solid;
+    font-size: 16px;
+    align: right;
+}
+
+/*ボタンにマウスが乗った時*/
+.btn:hover {
+    opacity: 0.7;
+}
+/*ボタンを押した瞬間*/
+.btn:active {
+    color: #fff;
+}
+/*ボタンの役割に合わせて色分け*/
+.btn-clear {
+    background-color: #cff;
+}
+
+.btn-send {
+    background-color: #f6bb9e;
+}
+
+p#copyright {
+    text-align: center;
+    color: #fff;
+}
+
+p#login {
+    text-align: right;
+    margin: 20px auto;
+}
+
+p.btn {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.ui-header .ui-title {
+    overflow: visible;
+    white-space: normal;
+}
+
+footer {
+    background: #ff0 color:#6fbb9a;
+    /*border:#94c8b1 1px solid;*/
+    padding: 5px;
+    margin: 20px auto;
+}
+
+form#login {
+    width: 60%;
+    text-align: center;
+    border: #f6bb9e 2px solid;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+#opbtns {
+    margin: 20px auto;
+}
+
+#opbtns a {
+    display: inline-block;
+    background-color: #afeeee;
+    margin-right: 10px;
+    width: 120px;
+    margin: 0px 5px;
+    padding: 5px;
+    border: #ccc 1px solid;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+button.btnshow {
+    /*display: inline-block;*/
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+    text-align: center;
+    /*line-height: 30px;
+	border: 1px #ccc solid;*/
+    color: white;
+}
+
+button.btnRed {
+    background-color: red;
+}
+
+button.btnBlue {
+    background-color: blue;
+}
