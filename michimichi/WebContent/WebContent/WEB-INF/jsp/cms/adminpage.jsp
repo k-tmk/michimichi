@@ -23,13 +23,14 @@
 			<section>
 				<h1>マイページ</h1>
 				<div id="opbtns">
-					<a href="/cafeshop/CtrlForCms?pge_id=1">つぶやき</a> <a
-						href="/cafeshop/CtrlForCms?pge_id=2">記事管理</a> <a
-						href="/cafeshop/CtrlForCms?pge_id=3">メニュー管理</a> <a
-						href="/cafeshop/CtrlForCms?pge_id=4">アカウント管理</a>
+					<a href="/michimichi/CtrlForCms?pge_id=1">コメント管理</a> <a
+						href="/michimichi/CtrlForCms?pge_id=2">道の駅管理</a> <a
+						href="/michimichi/CtrlForCms?pge_id=3">特集管理</a> <a
+						href="/michimichi/CtrlForCms?pge_id=4">アカウント管理</a>
 				</div>
 			</section>
-			<section>
+
+			<!-- <section>
 				<h2>お知らせ</h2>
 				<table class="entryForm">
 					<tr>
@@ -48,8 +49,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-			</section>
-
+			</section> -->
 		</div>
 
 	</c:param>

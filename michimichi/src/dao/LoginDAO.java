@@ -39,7 +39,7 @@ public class LoginDAO {
 			if(rs.next()) {
 				int user_id = rs.getInt("USER_ID");
 				String login_id = rs.getString("LOGIN_ID");
-				String password = rs.getString("PASS");
+				String password = rs.getString("PASSWORD");
 				String name = rs.getString("NAME");
 
 				//ユーザーアカウントを生成する
