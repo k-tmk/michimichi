@@ -15,7 +15,12 @@
 
 	<c:param name="content">
 
-		<main id="contents" class="contents">
+
+		<a herf="/CtrlForFront?pge_id=1">TOP</a>
+		<a herf="/CtrlForFront?pge_id=3">記事一覧</a>
+		<a herf="/CtrlForFront?pge_id=4&con_id=1">記事個別＿ID1</a>
+
+		<!-- 		<main id="contents" class="contents">
 			<div class="container">
 
 				<section id="menu" class="section">
@@ -113,5 +118,6 @@
 		<!-- main -->
 
 
+		 -->
 	</c:param>
 </c:import>

@@ -92,7 +92,7 @@ public class T_featuresDAO {
 		try {
 
 			//SELECT文を準備
-			//show_flagで表示になっているものを、降順で抽出する。
+			//show_flagで表示になっている指定されたIDのものを降順で抽出する。
 			sql = "SELECT * "
 					+ " FROM t_features INNER JOIN m_feature_types "
 					+ " ON t_features.feature_id = m_feature_types.feature_id"
@@ -102,7 +102,7 @@ public class T_featuresDAO {
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
-			//pStmt.setInt(一番目の？,代入するもの)
+			//pStmt.setInt(n番目の？,代入するもの)
 			pStmt.setInt(1, showflag);
 			pStmt.setInt(2, con_id);
 
@@ -126,7 +126,8 @@ public class T_featuresDAO {
 				String photo_path3 = rs.getString("photo_path3");
 				String alt3 = rs.getString("alt3");
 
-				Feature feature = new Feature(feature_id, feature_name, main_photo_path, alt,content,feature_type_id,feature_type_name,photo_path1,alt1,photo_path2,alt2,photo_path3,alt3);
+				Feature feature = new Feature(feature_id, feature_name, main_photo_path, alt,content,
+						feature_type_id,feature_type_name,photo_path1,alt1,photo_path2,alt2,photo_path3,alt3);
 				FList.add(feature);
 			}
 

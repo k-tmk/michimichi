@@ -16,18 +16,9 @@
 
 		<section id="menu" class="section">
 			<h2 class="list">
-				特集記事じゃよ～～～
+				特集記事ですわよ～～～！
 			</h2>
-			<ul class="pc-grid-col3 menu-list">
-				<c:forEach var="list" items="${FLList}" end="5">
-					<li class="col"><img src="${list.main_photo_path}"
-						alt="${list.alt}">
-						<p class="menu-text">${list.feature_name}<br>
-						<a href="/CtrlForFront?pge_id=9&con_id=${list.feature_id}">こっちじゃよ</a>
-						</p></li>
-				</c:forEach>
 
-			</ul>
 		</section>
 
 	</c:param>

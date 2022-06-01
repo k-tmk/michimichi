@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beams.Feature;
 import beams.FeatureList;
 import model.FeatureListLogic;
+import model.FeatureLogic;
 
 
 /**
@@ -53,6 +55,7 @@ public class CtrlForFront extends HttpServlet {
 
 		// リクエストスコープに保存
 		request.setAttribute("pge_id", pge_id);
+		request.setAttribute("con_id", con_id);
 
 		//リクエストスコープに各ページ用情報保存、フォワード先を設定
 		if (pge_id==1) {
@@ -163,10 +166,33 @@ public class CtrlForFront extends HttpServlet {
 	}
 
 	private String movetoFeature(HttpServletRequest request) {
+		//リクエストパラメータを取得する
+		//コンテンツ番号
+		String para2 = request.getParameter("con_id");
+		String forward = "";
+		int con_id = 0;
 
+		//入力値チェック
+		if (para2 != null && para2.length() != 0) {
+			con_id = Integer.parseInt(para2);
+		}
+
+		// リクエストスコープに保存
+		request.setAttribute("con_id", con_id);
+
+		//一覧に表示するものだけ（DAOへの命令の大元）
+		final int SHOWFALG = 1;
+		int CONID = con_id;
+
+		// 特集個別記事の内容を取得する
+		FeatureLogic featureLogic = new FeatureLogic();
+		List<Feature> FLList =  featureLogic.getAllFeature(SHOWFALG,CONID);
+
+		// リクエストスコープに保存
+		request.setAttribute("FLList", FLList);
 
 		// フォーワード先
-		String forward = "WEB-INF/jsp/front/feature.jsp";
+		forward = "WEB-INF/jsp/front/feature.jsp";
 		return forward;
 
 	}
