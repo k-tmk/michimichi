@@ -65,9 +65,9 @@
 
 </head>
 <body>
-	<jsp:include page="header-back.jsp" />
+	<jsp:include page="header_back.jsp" />
 	<div class="container">${param.content}</div>
-	<jsp:include page="footer-back.jsp" />
+	<jsp:include page="footer_back.jsp" />
 
 </body>
 </html>

@@ -22,13 +22,13 @@ import model.Account;
  * Servlet implementation class AccountEdit
  */
 @WebServlet("/AccountEdit")
-public class AccountEdit extends HttpServlet {
+public class AdminEdit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AccountEdit() {
+	public AdminEdit() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

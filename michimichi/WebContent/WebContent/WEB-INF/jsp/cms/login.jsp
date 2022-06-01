@@ -19,7 +19,7 @@
 							ユーザー名：<input type="text" name="login_id">
 						</p>
 						<p>
-							パスワード：<input type="password" name="pass">
+							パスワード：<input type="password" name="password">
 						</p>
 						<p>
 							<input class="btns btn-send" type="submit" value="ログイン">

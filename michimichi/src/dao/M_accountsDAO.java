@@ -10,15 +10,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import model.Account;
 import model.DbConnection;
-import servlet.AccountEdit;
+import servlet.Admin;
 
 public class M_accountsDAO {
 
-	public AccountEdit findByUserid(int userid){
+	public Admin findByUserid(int userid){
 
-		AccountEdit account = null;
+		Admin account = null;
 
 		//データベースに接続
 		Connection conn = null;
@@ -46,7 +45,7 @@ public class M_accountsDAO {
 				//Accountのデータを取得
 				int user_id = rs.getInt("user_id");
 				String login_id = rs.getString("login_id");
-				String pass = rs.getString("pass");
+				String password = rs.getString("password");
 				String name = rs.getString("name");
 				Date birthday = rs.getDate("birthday");
 				int gender = rs.getInt("gender");
@@ -57,10 +56,10 @@ public class M_accountsDAO {
 				Date createtime = rs.getTimestamp("createtime");
 
 				//accountインスタンスを生成
-				account = new AccountEdit(
+				account = new Admin(
 						user_id,
 						login_id,
-						pass,
+						password,
 						name,
 						birthday,
 						gender,

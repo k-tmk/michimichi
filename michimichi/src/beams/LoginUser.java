@@ -6,23 +6,23 @@ public class LoginUser implements Serializable{
 
 	private int user_id;
 	private String login_id;
-	private String pass;
+	private String password;
 	private String name;
 
 	public LoginUser() {
 
 	}
 
-	public LoginUser(int user_id,String login_id,String pass,String name) {
+	public LoginUser(int user_id,String login_id,String password,String name) {
 		this.user_id = user_id;
 		this.login_id = login_id;
-		this.pass = pass;
+		this.password = password;
 		this.name = name;
 	}
 
-	public LoginUser(String login_id,String pass) {
+	public LoginUser(String login_id,String password) {
 		this.login_id = login_id;
-		this.pass = pass;
+		this.password = password;
 	}
 
 	public int getUser_id() {
@@ -42,11 +42,11 @@ public class LoginUser implements Serializable{
 	}
 
 	public String getPass() {
-		return this.pass;
+		return this.password;
 	}
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPass(String password) {
+		this.password = password;
 	}
 
 	public String getName() {

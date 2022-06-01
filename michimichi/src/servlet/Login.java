@@ -56,7 +56,7 @@ public class Login extends HttpServlet {
 		if(loginUser!=null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser",loginUser);
-			response.sendRedirect("/cafeshop/CtrlForCms?pge_id=0");
+			response.sendRedirect("/michimichi/CtrlForCms?pge_id=0");
 		}else {
 
 			String forward = "/WEB-INF/jsp/loginResult.jsp";
