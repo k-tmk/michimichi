@@ -5,7 +5,7 @@
 
 <c:import url="layout/template.jsp">
 
-	<c:param name="title" value="特集記事一覧（仮）" />
+	<c:param name="title" value="${FLList.feature_name}" />
 	<!-- <c:param name="keywords" value="徳島,Coffee,Cafe Leaf" /> -->
 	<c:param name="description" value="description。description" />
 	<c:param name="mycss" value="" />
